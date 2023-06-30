@@ -7,9 +7,9 @@ export default class extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.boolean('is_active').defaultTo(false)
-      table.dateTime('complete_at')
-      table.timestamp('created_at', { useTz: true })
-      table.timestamp('updated_at', { useTz: true })
+      table.dateTime('complete_at').defaultTo(null)
+      table.dateTime('created_at', { useTz: true })
+      table.dateTime('updated_at', { useTz: true })
     })
   }
 
