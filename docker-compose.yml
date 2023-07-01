@@ -1,16 +1,16 @@
 version: '3'
 services:
-  # api:
-  #   image: luandromat
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   command:
-  #     ["/bin/sh", "-c", "npm install && npm cache clean --force && npm run dev"]
-  #   ports:
-  #     - "3333:3333"
-  #   networks:
-  #     - app-network
+  api:
+    image: luandromat
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+      ["/bin/sh", "-c", "npm install && npm cache clean --force && npm run dev"]
+    ports:
+      - "3333:3333"
+    networks:
+      - app-network
   
   db:
     image: mysql:5.7
