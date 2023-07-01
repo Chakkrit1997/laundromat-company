@@ -1,7 +1,7 @@
 version: '3'
 services:
   api:
-    image: luandromat
+    image: laundromat
     build:
       context: .
       dockerfile: Dockerfile
