@@ -29,3 +29,10 @@ Route.get('health', async ({ response }) => {
   const report = await HealthCheck.getReport()
   return report.healthy ? response.ok(report) : response.badRequest(report)
 })
+
+Route.group(() => {
+  Route.get('', 'WashingsController.index')
+  Route.post('create', 'WashingsController.create')
+  Route.post(':id', 'WashingsController.show')
+  Route.delete(':id', 'WashingsController.destroy')
+}).prefix('washing')
